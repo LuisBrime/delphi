@@ -1,0 +1,23 @@
+{
+    "include": ["delphi/**/*", "tests/**/*"],
+    "exclude": ["node_modules/**", "dist/**", "delphi/dist/**"],
+    "compilerOptions": {
+        "baseUrl": "./delphi",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist",
+        "esModuleInterop": true,
+        "allowJs": true,
+        "checkJs": true,
+        "lib": ["ES6", "ESNext"],
+        "target": "ES2019",
+        "noImplicitAny": false,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "allowUnreachableCode": false,
+    }
+}
