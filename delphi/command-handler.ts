@@ -1,8 +1,8 @@
 import { Message } from 'discord.js';
 import { Command, GreetCommand } from 'commands';
 import { CommandContext } from 'models/command-context';
-import { reactor } from 'reactions';
-import { match } from 'assert';
+import { reactor } from 'utils';
+import { HelpCommand } from 'commands/help';
 
 export class CommandHandler {
   private commands: Command[];
@@ -16,6 +16,7 @@ export class CommandHandler {
     ];
 
     this.commands = commandClasses.map(commandClass => new commandClass());
+    this.commands.push(new HelpCommand(this.commands));
     this.prefix = prefix;
   }
 

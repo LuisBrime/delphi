@@ -1,6 +1,4 @@
 export type BotConfig = {
-    /* Discord Bot token */
-    token: string,
     /* Prefix for Bot commands */
     prefix: string,
     /* Name of the role that gives power over the bot */
@@ -10,7 +8,6 @@ export type BotConfig = {
 };
 
 export const config: BotConfig = {
-    token: '',
     prefix: './',
     botOwnerRoleName: '',
     enableReactions: true,

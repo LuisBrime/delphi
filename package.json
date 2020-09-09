@@ -19,7 +19,8 @@
     "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "discord.js": "^12.3.1"
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.13",

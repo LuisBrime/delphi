@@ -1,8 +1,10 @@
 import Discord, { Message } from 'discord.js';
-import { config, BotConfig } from 'config';
+import dotenv from 'dotenv';
+
+import { config } from 'config';
 import { CommandHandler } from './command-handler';
 
-validateConfig(config);
+dotenv.config();
 
 const commandHandler = new CommandHandler(config.prefix);
 const client = new Discord.Client();
@@ -19,11 +21,5 @@ client.on('error', e => {
     console.error('Discord client error!', e);
 });
 
-client.login(config.token);
+client.login(process.env.DISCORD_TOKEN);
 
-/** Pre-startup validation of the bot config. */
-function validateConfig(config: BotConfig) {
-    if (!config.token) {
-        throw new Error('You need to specify your Discord bot token!');
-    }
-}
